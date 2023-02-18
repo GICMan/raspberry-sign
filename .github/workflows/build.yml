@@ -11,5 +11,8 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v3
 
+      - name: Install GTK
+        run: sudo apt-get install libwebkit2gtk-4.0-dev
+
       - name: Build
         run: go build -v ./main.go
