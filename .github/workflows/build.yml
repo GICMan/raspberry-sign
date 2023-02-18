@@ -16,3 +16,9 @@ jobs:
 
       - name: Build
         run: go build -v ./main.go
+
+      - name: Save artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: ./raspberry-sign
